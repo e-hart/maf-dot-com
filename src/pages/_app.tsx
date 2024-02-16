@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <div
-        className={`relative h-screen w-screen overflow-x-clip overflow-y-scroll overscroll-none ${sourceSans3.className}`}
+        className={`relative h-screen w-screen overflow-x-clip overflow-y-scroll ${sourceSans3.className}`}
       >
         <div className={styles.bg} />
         {pathname === "/" ? <Hero /> : null}
