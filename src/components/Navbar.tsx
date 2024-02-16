@@ -133,7 +133,7 @@ export function Navbar() {
       <>
         <button
           onClick={handleDrawerOpen}
-          className="letter-spacing fixed bottom-4 right-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
+          className="letter-spacing fixed right-4 top-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
         >
           Menu
         </button>
@@ -143,7 +143,7 @@ export function Navbar() {
           className="fixed right-0 top-0 z-50 flex h-full w-64 flex-col justify-center gap-12 bg-white shadow-[0_0_10px_0_#0008] transition-transform"
         >
           <ArrowRightIcon
-            className="absolute left-4 top-4 h-6 w-6 cursor-pointer text-[#1e252d] transition-colors hover:text-[#18bfef]"
+            className="absolute bottom-4 left-4 h-6 w-6 cursor-pointer text-[#1e252d] transition-colors hover:text-[#18bfef]"
             onClick={handleDrawerClose}
           />
           <ul className="letter-spacing mt-20 flex w-full flex-col items-center gap-8 text-[.8rem] font-black uppercase text-[#1e252d]">
