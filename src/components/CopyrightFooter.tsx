@@ -5,7 +5,7 @@ export default function CopyrightFooter() {
       className="bg w-full bg-[image:linear-gradient(to_right,_#0000_10%,_#0008_50%,_#0000_90%)] px-24 py-12"
     >
       <ul className="letter-spacing flex flex-wrap items-center justify-around text-sm font-black uppercase text-neutral-200">
-        <li>&copy; Mildly Aggressive Folk</li>
+        <li>&copy; Mildly Aggressive Folk {new Date().getFullYear()}</li>
         <li className="text-center text-xs">
           Built by{" "}
           <a
