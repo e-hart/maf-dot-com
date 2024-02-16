@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   ArrowRightIcon,
   DiscordLogo,
@@ -8,11 +8,14 @@ import {
   TwitchLogo,
   YouTubeLogo,
 } from "~/components/Logos";
+import { useOnClickOutside } from "~/hooks/useOnClickOutside";
 
 export function Navbar() {
   const [pathname, setPathname] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  useOnClickOutside(ref, handleDrawerClose, "mousedown");
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -42,13 +45,13 @@ export function Navbar() {
     }
   }, []);
 
-  const handleDrawerOpen = () => {
+  function handleDrawerOpen() {
     setIsDrawerOpen(true);
-  };
+  }
 
-  const handleDrawerClose = () => {
+  function handleDrawerClose() {
     setIsDrawerOpen(false);
-  };
+  }
 
   if (!isMobile)
     return (
@@ -138,9 +141,10 @@ export function Navbar() {
           Menu
         </button>
         <nav
+          ref={ref}
           id="nav"
           style={{ transform: isDrawerOpen ? "translateX(0)" : "translateX(100%)" }}
-          className="fixed right-0 top-0 z-50 flex h-full w-64 flex-col justify-center gap-12 bg-white shadow-[0_0_10px_0_#0008] transition-transform"
+          className="fixed right-0 top-0 z-[100] flex h-full w-64 flex-col justify-center gap-12 bg-white shadow-[0_0_10px_0_#0008] transition-transform"
         >
           <ArrowRightIcon
             className="absolute bottom-4 left-4 h-6 w-6 cursor-pointer text-[#1e252d] transition-colors hover:text-[#18bfef]"

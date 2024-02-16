@@ -25,7 +25,7 @@ export default function Hero() {
         <h1
           ref={ref}
           style={{ ...style, letterSpacing: "0.075em" }}
-          className={`text-shadow font-[spacing:_1rem] text-center text-[3rem] font-black uppercase leading-none sm:text-[5rem]`}
+          className={`text-shadow font-[spacing:_1rem] text-center text-[2.75rem] font-black uppercase leading-none sm:text-[5rem]`}
         >
           Mildly
           <br />
@@ -37,7 +37,7 @@ export default function Hero() {
         <p
           id="scrollToMaf"
           style={{ ...style }}
-          className="my-4 text-center text-xl font-thin italic"
+          className="my-4 px-4 text-center text-xl font-thin italic"
         >
           Atlanta based Twitch-streaming string duo
         </p>
