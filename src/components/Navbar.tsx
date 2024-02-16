@@ -133,7 +133,7 @@ export function Navbar() {
       <>
         <button
           onClick={handleDrawerOpen}
-          className="letter-spacing fixed right-4 top-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
+          className="letter-spacing fixed bottom-4 right-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
         >
           Menu
         </button>
