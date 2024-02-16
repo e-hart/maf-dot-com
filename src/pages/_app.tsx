@@ -14,6 +14,7 @@ import { Navbar } from "~/components/Navbar";
 import { useRouter } from "next/router";
 import CopyrightFooter from "~/components/CopyrightFooter";
 import SocialFooter from "~/components/SocialFooter";
+import HeaderBadge from "~/components/HeaderBadge";
 
 export const PortalRefContext = createContext<HTMLDivElement | null>(null);
 
@@ -26,10 +27,12 @@ export default function App({ Component, pageProps }: AppProps) {
       <div
         className={`relative h-screen w-screen overflow-x-clip overflow-y-scroll ${sourceSans3.className} ${styles.bg}`}
       >
-        {pathname === "/" ? <Hero /> : null}
+        {pathname === "/" ? <Hero /> : <HeaderBadge />}
         <div className="slide-from-bottom mx-auto flex h-fit min-h-screen w-full flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
           <Navbar />
-          <Component {...pageProps} />
+          <main className="z-10 w-full overflow-clip bg-white pt-8 text-[#212931] shadow-[-20px_0_20px_-20px_#0008,_20px_0_20px_-20px_#0008]">
+            <Component {...pageProps} />
+          </main>
           <SocialFooter />
         </div>
         <CopyrightFooter />

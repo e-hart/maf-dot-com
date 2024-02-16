@@ -31,6 +31,7 @@
 
 .letter-spacing {
   letter-spacing: 0.1em;
+  text-indent: 0.1em;
 }
 
 .slide-from-bottom {

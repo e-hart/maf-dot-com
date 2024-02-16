@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowRightIcon,
@@ -11,10 +12,11 @@ import {
 import { useOnClickOutside } from "~/hooks/useOnClickOutside";
 
 export function Navbar() {
-  const [pathname, setPathname] = useState("");
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  const pathname = useRouter().pathname;
   useOnClickOutside(ref, handleDrawerClose, "mousedown");
 
   useEffect(() => {
@@ -37,12 +39,6 @@ export function Navbar() {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setPathname(window.location.pathname);
-    }
   }, []);
 
   function handleDrawerOpen() {
