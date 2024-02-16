@@ -11,7 +11,7 @@ import {
 
 export function Navbar() {
   const [pathname, setPathname] = useState("");
-  const [isDrawerOpen, setIsDrawerOpen] = useState(true);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
