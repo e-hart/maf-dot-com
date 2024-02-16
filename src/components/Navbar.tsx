@@ -133,7 +133,7 @@ export function Navbar() {
       <>
         <button
           onClick={handleDrawerOpen}
-          className="letter-spacing fixed right-8 top-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
+          className="letter-spacing fixed right-4 top-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
         >
           Menu
         </button>
@@ -146,32 +146,7 @@ export function Navbar() {
             className="absolute left-4 top-4 h-6 w-6 cursor-pointer text-[#1e252d] transition-colors hover:text-[#18bfef]"
             onClick={handleDrawerClose}
           />
-          <ul className="mt-20 flex flex-col gap-8">
-            <style jsx>{`
-              ul {
-                display: flex;
-                width: 100%;
-                text-transform: uppercase;
-                font-weight: 900;
-                font-size: 0.8rem;
-                letter-spacing: 0.075em;
-                align-items: center;
-                color: #1e252d;
-
-                li {
-                  transition: background 0.5s;
-
-                  &[data-active="false"]:hover {
-                    background: #fff4;
-                  }
-                }
-
-                & [data-active="true"] {
-                  background: #fff;
-                  color: #1e252d;
-                }
-              }
-            `}</style>
+          <ul className="letter-spacing mt-20 flex w-full flex-col items-center gap-8 text-[.8rem] font-black uppercase text-[#1e252d]">
             <li
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/"}
