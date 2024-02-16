@@ -28,8 +28,8 @@ export default function Home() {
             <article className="flex flex-col items-center border-b border-neutral-200">
               <h1 className="letter-spacing text-center text-[4rem] font-black">NEW MERCH!</h1>
               <p className="mx-8 my-8 text-center font-sans font-extralight leading-none">
-                The new Honey Bear Handmade crossbody bag, available in many styles, including Rifle
-                Paper Co.! <br />
+                The new Honey Bear Handmade crossbody bag, available in many styles (including Rifle
+                Paper Co.)! <br />
                 <br />
                 Check out the shop for the crossbody and other Stephanie-made merch.
               </p>
