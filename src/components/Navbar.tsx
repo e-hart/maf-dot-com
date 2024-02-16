@@ -82,19 +82,29 @@ export function Navbar() {
             }
           `}</style>
           <li data-active={pathname === "/"}>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={handleDrawerClose}>
+              Home
+            </Link>
           </li>
           <li data-active={pathname === "/stream"}>
-            <Link href="/stream">The Stream</Link>
+            <Link href="/stream" onClick={handleDrawerClose}>
+              The Stream
+            </Link>
           </li>
           <li data-active={pathname === "/shop"}>
-            <Link href="/shop">The (Handmade) Merch</Link>
+            <Link href="/shop" onClick={handleDrawerClose}>
+              The (Handmade) Merch
+            </Link>
           </li>
           <li data-active={pathname === "/videos"}>
-            <Link href="/videos">Videos</Link>
+            <Link href="/videos" onClick={handleDrawerClose}>
+              Videos
+            </Link>
           </li>
           <li data-active={pathname === "/booking"}>
-            <Link href="/booking">Booking</Link>
+            <Link href="/booking" onClick={handleDrawerClose}>
+              Booking
+            </Link>
           </li>
         </ul>
         <ul className="mr-4 flex items-center">
