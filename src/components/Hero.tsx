@@ -12,7 +12,7 @@ export default function Hero() {
   }, [isIntersecting]);
 
   const scrollToFeatured = () => {
-    document.getElementById("maf")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("scrollToMaf")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -34,7 +34,11 @@ export default function Hero() {
           Folk
         </h1>
         <br />
-        <p style={{ ...style }} className="my-4 text-center text-xl font-thin italic">
+        <p
+          id="scrollToMaf"
+          style={{ ...style }}
+          className="my-4 text-center text-xl font-thin italic"
+        >
           Atlanta based Twitch-streaming string duo
         </p>
         <br />
@@ -45,8 +49,7 @@ export default function Hero() {
           <DownArrow onClick={scrollToFeatured} />
         </div>
         <div
-          id="maf"
-          className="absolute bottom-20 z-10 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
+          className="absolute bottom-20 z-10 mt-4 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
           style={{ opacity: isIntersecting ? "0" : "1", transition: "all 0.5s" }}
         >
           <h1 style={{ letterSpacing: ".125em" }}>MAF</h1>
