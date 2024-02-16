@@ -11,17 +11,13 @@ const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 import { createContext } from "react";
 import Hero from "~/components/Hero";
 import { Navbar } from "~/components/Navbar";
+import { useRouter } from "next/router";
 
 export const PortalRefContext = createContext<HTMLDivElement | null>(null);
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [pathname, setPathname] = useState("");
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      setPathname(window.location.pathname);
-    }
-  }, []);
+  const pathname = useRouter().pathname;
+  console.log(pathname);
 
   return (
     <>
@@ -30,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         <div className={styles.bg} />
         {pathname === "/" ? <Hero /> : null}
-        <div className="slide-from-bottom mx-auto flex w-full flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
+        <div className="slide-from-bottom mx-auto flex w-full flex-col items-center overflow-clip xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
           <Navbar />
           <Component {...pageProps} />
         </div>
