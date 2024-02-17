@@ -81,21 +81,21 @@ export function Navbar() {
               }
             }
           `}</style>
-          <li data-active={pathname === "/"}>
-            <Link href="/">Home</Link>
-          </li>
-          <li data-active={pathname === "/stream"}>
-            <Link href="/stream">The Stream</Link>
-          </li>
-          <li data-active={pathname === "/shop"}>
-            <Link href="/shop">The (Handmade) Merch</Link>
-          </li>
-          <li data-active={pathname === "/videos"}>
-            <Link href="/videos">Videos</Link>
-          </li>
-          <li data-active={pathname === "/booking"}>
-            <Link href="/booking">Booking</Link>
-          </li>
+          <Link href="/">
+            <li data-active={pathname === "/"}>Home</li>
+          </Link>
+          <Link href="/stream">
+            <li data-active={pathname === "/stream"}>The Stream</li>
+          </Link>
+          <Link href="/shop">
+            <li data-active={pathname === "/shop"}>The (Handmade) Merch</li>
+          </Link>
+          <Link href="/videos">
+            <li data-active={pathname === "/videos"}>Videos</li>
+          </Link>
+          <Link href="/booking">
+            <li data-active={pathname === "/booking"}>Booking</li>
+          </Link>
         </ul>
         <ul className="mr-4 flex items-center">
           <li className="mx-2 transition-colors hover:text-[#18bfef]">
