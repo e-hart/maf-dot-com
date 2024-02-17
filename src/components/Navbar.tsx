@@ -12,6 +12,22 @@ import {
 import useIsMobile from "~/hooks/useIsMobile";
 import { useOnClickOutside } from "~/hooks/useOnClickOutside";
 
+const routes = [
+  { name: "Home", path: "/" },
+  { name: "The Stream", path: "/stream" },
+  { name: "The (Handmade) Merch", path: "/shop" },
+  { name: "Videos", path: "/videos" },
+  { name: "Booking", path: "/booking" },
+];
+
+const socialLinks = [
+  { name: "Twitch", href: "https://twitch.tv/mildlyaggressivefolk", Logo: TwitchLogo },
+  { name: "YouTube", href: "https://www.youtube.com/@mildlyaggressivefolk", Logo: YouTubeLogo },
+  { name: "Discord", href: "https://discord.gg/mgZzerpuQe", Logo: DiscordLogo },
+  { name: "Instagram", href: "https://instagram.com/mildlyaggressivefolk", Logo: InstagramLogo },
+  { name: "Facebook", href: "https://www.facebook.com/mildlyaggressivefolk", Logo: FacebookLogo },
+];
+
 export function Navbar() {
   const pathname = useRouter().pathname;
   const isMobile = useIsMobile();
@@ -29,8 +45,6 @@ export function Navbar() {
     setIsDrawerOpen(false);
   }
 
-  const liStyle = { transition: "background 0.5s" };
-
   if (!isMobile)
     return (
       <nav
@@ -38,58 +52,22 @@ export function Navbar() {
         className="z-0 flex w-full justify-between bg-[#ffffff2e] shadow-[0_0_10px_0_#0008]"
       >
         <ul className=" flex w-full items-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
-          <Link href="/">
-            <li style={liStyle} data-active={pathname === "/"}>
-              Home
-            </li>
-          </Link>
-          <Link href="/stream">
-            <li style={liStyle} data-active={pathname === "/stream"}>
-              The Stream
-            </li>
-          </Link>
-          <Link href="/shop">
-            <li style={liStyle} data-active={pathname === "/shop"}>
-              The (Handmade) Merch
-            </li>
-          </Link>
-          <Link href="/videos">
-            <li style={liStyle} data-active={pathname === "/videos"}>
-              Videos
-            </li>
-          </Link>
-          <Link href="/booking">
-            <li style={liStyle} data-active={pathname === "/booking"}>
-              Booking
-            </li>
-          </Link>
+          {routes.map((route) => (
+            <Link key={route.path} href={route.path}>
+              <li style={{ transition: "background 0.5s" }} data-active={pathname === route.path}>
+                {route.name}
+              </li>
+            </Link>
+          ))}
         </ul>
         <ul className="mr-4 flex items-center">
-          <li className="mx-2 transition-colors hover:text-[#18bfef]">
-            <a href="https://twitch.tv/mildlyaggressivefolk">
-              <TwitchLogo className="h-6 w-6 p-1" />
-            </a>
-          </li>
-          <li className="mx-2 transition-colors hover:text-[#18bfef]">
-            <a href="https://www.youtube.com/@mildlyaggressivefolk">
-              <YouTubeLogo />
-            </a>
-          </li>
-          <li className="mx-2 transition-colors hover:text-[#18bfef]">
-            <a href="https://discord.gg/mgZzerpuQe">
-              <DiscordLogo />
-            </a>
-          </li>
-          <li className="mx-2 transition-colors hover:text-[#18bfef]">
-            <a href="https://instagram.com/mildlyaggressivefolk">
-              <InstagramLogo />
-            </a>
-          </li>
-          <li className="mx-2 transition-colors hover:text-[#18bfef]">
-            <a href="https://www.facebook.com/mildlyaggressivefolk">
-              <FacebookLogo />
-            </a>
-          </li>
+          {socialLinks.map((link) => (
+            <li key={link.name} className="mx-2 transition-colors hover:text-[#18bfef]">
+              <a href={link.href}>
+                <link.Logo />
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     );
@@ -103,6 +81,7 @@ export function Navbar() {
         >
           Menu
         </button>
+
         <nav
           ref={ref}
           id="nav"
@@ -114,73 +93,26 @@ export function Navbar() {
             onClick={handleDrawerClose}
           />
           <ul className="mt-20 flex w-full flex-col items-center gap-8 indent-[0.1em] text-[.8rem] font-black uppercase tracking-widest text-[#1e252d]">
-            <li
-              className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
-              data-active={pathname === "/"}
-            >
-              <Link href="/" onClick={handleDrawerClose}>
-                Home
-              </Link>
-            </li>
-            <li
-              className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
-              data-active={pathname === "/stream"}
-            >
-              <Link href="/stream" onClick={handleDrawerClose}>
-                The Stream
-              </Link>
-            </li>
-            <li
-              className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
-              data-active={pathname === "/shop"}
-            >
-              <Link href="/shop" onClick={handleDrawerClose}>
-                The (Handmade) Merch
-              </Link>
-            </li>
-            <li
-              className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
-              data-active={pathname === "/videos"}
-            >
-              <Link href="/videos" onClick={handleDrawerClose}>
-                Videos
-              </Link>
-            </li>
-            <li
-              className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
-              data-active={pathname === "/booking"}
-            >
-              <Link href="/booking" onClick={handleDrawerClose}>
-                Booking
-              </Link>
-            </li>
+            {routes.map((route) => (
+              <li
+                key={route.path}
+                className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
+                data-active={pathname === route.path}
+              >
+                <Link href={route.path} onClick={handleDrawerClose}>
+                  {route.name}
+                </Link>
+              </li>
+            ))}
           </ul>
           <ul className=" flex items-center justify-center text-[#1e252d]">
-            <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://twitch.tv/mildlyaggressivefolk" onClick={handleDrawerClose}>
-                <TwitchLogo className="h-6 w-6 p-1" />
-              </a>
-            </li>
-            <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://www.youtube.com/@mildlyaggressivefolk" onClick={handleDrawerClose}>
-                <YouTubeLogo />
-              </a>
-            </li>
-            <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://discord.gg/mgZzerpuQe" onClick={handleDrawerClose}>
-                <DiscordLogo />
-              </a>
-            </li>
-            <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://instagram.com/mildlyaggressivefolk" onClick={handleDrawerClose}>
-                <InstagramLogo />
-              </a>
-            </li>
-            <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://www.facebook.com/mildlyaggressivefolk" onClick={handleDrawerClose}>
-                <FacebookLogo />
-              </a>
-            </li>
+            {socialLinks.map((link) => (
+              <li key={link.name} className="mx-2 transition-colors hover:text-[#18bfef]">
+                <a href={link.href} onClick={handleDrawerClose}>
+                  <link.Logo />
+                </a>
+              </li>
+            ))}
           </ul>
         </nav>
       </>
