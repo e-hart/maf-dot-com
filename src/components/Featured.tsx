@@ -5,7 +5,9 @@ export default function Featured() {
   return (
     <section id="featured" className="flex flex-col items-center pt-20 ">
       <article className="flex flex-col items-center border-b border-neutral-200">
-        <h1 className="letter-spacing text-center text-[4rem] font-black">NEW MERCH!</h1>
+        <h1 className="text-center indent-[0.1em] text-[4rem] font-black tracking-widest">
+          NEW MERCH!
+        </h1>
         <p className="m-8 text-center font-sans font-extralight leading-none">
           The new Honey Bear Handmade crossbody bag, available in many styles (including Rifle Paper
           Co.)! <br />
@@ -24,7 +26,7 @@ export default function Featured() {
       </article>
       <section id="links" className="flex w-full flex-wrap justify-around sm:flex-nowrap">
         <article className="flex flex-col text-center sm:basis-1/2">
-          <h3 className="letter-spacing mt-16 text-center text-[1.75rem] font-black leading-tight">
+          <h3 className="mt-16 text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
             WATCH US LIVE
             <br />
             ON TWITCH!
@@ -49,7 +51,7 @@ export default function Featured() {
         </article>
         <div className=" basis-0 border-r border-neutral-200" />
         <article className="flex flex-col text-center sm:basis-1/2">
-          <h3 className="letter-spacing mt-16 text-center text-[1.75rem] font-black leading-tight">
+          <h3 className="mt-16 text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
             CHECK OUT OUR
             <br />
             YOUTUBE CHANNEL!

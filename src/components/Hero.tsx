@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="flex flex-col items-center justify-center">
         <h1
           ref={ref}
-          style={{ ...style, letterSpacing: "0.075em" }}
+          style={{ ...style, letterSpacing: "0.075em", textIndent: "0.075em" }}
           className={`text-shadow font-[spacing:_1rem] text-center text-[2.75rem] font-black uppercase leading-none sm:text-[5rem]`}
         >
           Mildly

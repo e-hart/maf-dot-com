@@ -31,7 +31,7 @@ export default function SocialFooter() {
             <InstagramLogo className="h-6 w-6" />
           </a>
         </li>
-        <li className="none rounded-full border border-neutral-400 p-2 transition-colors hover:border-[#18bfef] hover:text-[#18bfef] sm:p-3">
+        <li className="rounded-full border border-neutral-400 p-2 transition-colors hover:border-[#18bfef] hover:text-[#18bfef] sm:p-3">
           <a href="https://www.facebook.com/mildlyaggressivefolk">
             <FacebookLogo className="h-6 w-6" />
           </a>

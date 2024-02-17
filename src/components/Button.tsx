@@ -11,7 +11,7 @@ export default function Button(props: ButtonProps) {
       return (
         <a
           {...props}
-          className={`letter-spacing w-max border-2 border-black px-8 py-4 font-black uppercase text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
+          className={`w-max border-2 border-black px-8 py-4 indent-[0.1em] font-black uppercase tracking-widest text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
         >
           {props.children}
         </a>
@@ -22,7 +22,7 @@ export default function Button(props: ButtonProps) {
       return (
         <Link
           href={props.href}
-          className={`letter-spacing w-max border-2 border-black px-8 py-4 font-black uppercase text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
+          className={`w-max border-2 border-black px-8 py-4 indent-[0.1em] font-black uppercase tracking-widest text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
         >
           {props.children}
         </Link>
@@ -32,7 +32,7 @@ export default function Button(props: ButtonProps) {
     return (
       <a
         {...props}
-        className={`letter-spacing w-max border-2 border-black px-8 py-4 font-black uppercase text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
+        className={`w-max border-2 border-black px-8 py-4 indent-[0.1em] font-black uppercase tracking-widest text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
       >
         {props.children}
       </a>
@@ -41,7 +41,7 @@ export default function Button(props: ButtonProps) {
   return (
     <button
       {...props}
-      className={`letter-spacing w-max border-2 border-black px-8 py-4 font-black uppercase text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
+      className={`w-max border-2 border-black px-8 py-4 indent-[0.1em] font-black uppercase tracking-widest text-[#212931] transition-colors hover:border-[#2299ff] hover:text-[#2299ff] ${props.className}`}
     >
       {props.children}
     </button>

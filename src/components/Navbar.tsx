@@ -9,37 +9,17 @@ import {
   TwitchLogo,
   YouTubeLogo,
 } from "~/components/Logos";
+import useIsMobile from "~/hooks/useIsMobile";
 import { useOnClickOutside } from "~/hooks/useOnClickOutside";
 
 export function Navbar() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-
   const pathname = useRouter().pathname;
+  const isMobile = useIsMobile();
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, handleDrawerClose, "mousedown");
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const w = window.innerWidth;
-    if (w < 1280) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
-
-    function handleResize() {
-      if (window.innerWidth < 1280) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    }
-
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   function handleDrawerOpen() {
     setIsDrawerOpen(true);
@@ -49,52 +29,39 @@ export function Navbar() {
     setIsDrawerOpen(false);
   }
 
+  const liStyle = { transition: "background 0.5s" };
+
   if (!isMobile)
     return (
       <nav
         id="nav"
         className="z-0 flex w-full justify-between bg-[#ffffff2e] shadow-[0_0_10px_0_#0008]"
       >
-        <ul className="flex">
-          <style jsx>{`
-            ul {
-              display: flex;
-              width: 100%;
-              text-transform: uppercase;
-              font-weight: 900;
-              font-size: 0.8rem;
-              letter-spacing: 0.075em;
-              align-items: center;
-
-              li {
-                padding: 1.5rem 2rem;
-                transition: background 0.5s;
-
-                &[data-active="false"]:hover {
-                  background: #fff4;
-                }
-              }
-
-              & [data-active="true"] {
-                background: #fff;
-                color: #1e252d;
-              }
-            }
-          `}</style>
+        <ul className=" flex w-full items-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
           <Link href="/">
-            <li data-active={pathname === "/"}>Home</li>
+            <li style={liStyle} data-active={pathname === "/"}>
+              Home
+            </li>
           </Link>
           <Link href="/stream">
-            <li data-active={pathname === "/stream"}>The Stream</li>
+            <li style={liStyle} data-active={pathname === "/stream"}>
+              The Stream
+            </li>
           </Link>
           <Link href="/shop">
-            <li data-active={pathname === "/shop"}>The (Handmade) Merch</li>
+            <li style={liStyle} data-active={pathname === "/shop"}>
+              The (Handmade) Merch
+            </li>
           </Link>
           <Link href="/videos">
-            <li data-active={pathname === "/videos"}>Videos</li>
+            <li style={liStyle} data-active={pathname === "/videos"}>
+              Videos
+            </li>
           </Link>
           <Link href="/booking">
-            <li data-active={pathname === "/booking"}>Booking</li>
+            <li style={liStyle} data-active={pathname === "/booking"}>
+              Booking
+            </li>
           </Link>
         </ul>
         <ul className="mr-4 flex items-center">
@@ -132,7 +99,7 @@ export function Navbar() {
       <>
         <button
           onClick={handleDrawerOpen}
-          className="letter-spacing fixed right-4 top-4 z-50 bg-white p-2 text-sm font-black uppercase text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
+          className="fixed right-4 top-4 z-50 bg-white p-2 indent-[0.1em] text-sm font-black uppercase tracking-widest text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
         >
           Menu
         </button>
@@ -146,18 +113,12 @@ export function Navbar() {
             className="absolute bottom-4 left-4 h-6 w-6 cursor-pointer text-[#1e252d] transition-colors hover:text-[#18bfef]"
             onClick={handleDrawerClose}
           />
-          <ul className="letter-spacing mt-20 flex w-full flex-col items-center gap-8 text-[.8rem] font-black uppercase text-[#1e252d]">
+          <ul className="mt-20 flex w-full flex-col items-center gap-8 indent-[0.1em] text-[.8rem] font-black uppercase tracking-widest text-[#1e252d]">
             <li
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/"}
             >
-              <Link
-                href="/"
-                onClick={() => {
-                  handleDrawerClose();
-                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
-                }}
-              >
+              <Link href="/" onClick={handleDrawerClose}>
                 Home
               </Link>
             </li>
@@ -165,13 +126,7 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/stream"}
             >
-              <Link
-                href="/stream"
-                onClick={() => {
-                  handleDrawerClose();
-                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
-                }}
-              >
+              <Link href="/stream" onClick={handleDrawerClose}>
                 The Stream
               </Link>
             </li>
@@ -179,13 +134,7 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/shop"}
             >
-              <Link
-                href="/shop"
-                onClick={() => {
-                  handleDrawerClose();
-                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
-                }}
-              >
+              <Link href="/shop" onClick={handleDrawerClose}>
                 The (Handmade) Merch
               </Link>
             </li>
@@ -193,13 +142,7 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/videos"}
             >
-              <Link
-                href="/videos"
-                onClick={() => {
-                  handleDrawerClose();
-                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
-                }}
-              >
+              <Link href="/videos" onClick={handleDrawerClose}>
                 Videos
               </Link>
             </li>
@@ -207,13 +150,7 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/booking"}
             >
-              <Link
-                href="/booking"
-                onClick={() => {
-                  handleDrawerClose();
-                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
-                }}
-              >
+              <Link href="/booking" onClick={handleDrawerClose}>
                 Booking
               </Link>
             </li>

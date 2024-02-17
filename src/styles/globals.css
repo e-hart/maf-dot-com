@@ -29,11 +29,6 @@
   }
 }
 
-.letter-spacing {
-  letter-spacing: 0.1em;
-  text-indent: 0.1em;
-}
-
 .slide-from-bottom {
   animation: enter-from-bottom 1s ease-out;
 }
