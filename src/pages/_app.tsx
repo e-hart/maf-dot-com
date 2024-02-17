@@ -23,20 +23,22 @@ export default function App({ Component, pageProps }: AppProps) {
   useScrollToTop(pathname, isMobile);
 
   return (
-    <div
-      id="wrapper"
-      // I know I defend tailwind all the time but this one is.........special
-      className={`fixed z-0 h-screen w-screen overflow-x-clip overflow-y-scroll bg-[image:_linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.12)),url(/images/maf_couch.jpg),url(/images/bg.jpg)] bg-[cover,contain,cover] bg-[position:center,top,center] bg-no-repeat xl:bg-[cover,90%,cover] xl:bg-center ${sourceSans3.className}`}
-    >
-      {pathname === "/" ? <Hero /> : <HeaderBadge />}
-      <div className="slide-from-bottom mx-auto flex h-fit min-h-screen w-full flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
-        <Navbar />
-        <main className="z-10 w-full overflow-clip bg-white pt-8 text-[#212931] shadow-[-20px_0_20px_-20px_#0008,_20px_0_20px_-20px_#0008]">
-          <Component {...pageProps} />
-        </main>
-        <SocialFooter />
+    <>
+      <div
+        id="wrapper"
+        // I know I defend tailwind all the time but this one is.........special
+        className={`fixed z-0 h-full w-full overflow-x-clip overflow-y-scroll bg-[image:_linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.12)),url(/images/maf_couch.jpg),url(/images/bg.jpg)] bg-[cover,contain,cover] bg-[position:center,top,center] bg-no-repeat xl:bg-[cover,90%,cover] xl:bg-center ${sourceSans3.className}`}
+      >
+        {pathname === "/" ? <Hero /> : <HeaderBadge />}
+        <div className="slide-from-bottom mx-auto flex h-fit min-h-screen w-full flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
+          <Navbar />
+          <main className="z-10 w-full overflow-clip bg-white pt-8 text-[#212931] shadow-[-20px_0_20px_-20px_#0008,_20px_0_20px_-20px_#0008]">
+            <Component {...pageProps} />
+          </main>
+          <SocialFooter />
+        </div>
+        <CopyrightFooter />
       </div>
-      <CopyrightFooter />
-    </div>
+    </>
   );
 }
