@@ -82,29 +82,19 @@ export function Navbar() {
             }
           `}</style>
           <li data-active={pathname === "/"}>
-            <Link href="/" onClick={handleDrawerClose}>
-              Home
-            </Link>
+            <Link href="/">Home</Link>
           </li>
           <li data-active={pathname === "/stream"}>
-            <Link href="/stream" onClick={handleDrawerClose}>
-              The Stream
-            </Link>
+            <Link href="/stream">The Stream</Link>
           </li>
           <li data-active={pathname === "/shop"}>
-            <Link href="/shop" onClick={handleDrawerClose}>
-              The (Handmade) Merch
-            </Link>
+            <Link href="/shop">The (Handmade) Merch</Link>
           </li>
           <li data-active={pathname === "/videos"}>
-            <Link href="/videos" onClick={handleDrawerClose}>
-              Videos
-            </Link>
+            <Link href="/videos">Videos</Link>
           </li>
           <li data-active={pathname === "/booking"}>
-            <Link href="/booking" onClick={handleDrawerClose}>
-              Booking
-            </Link>
+            <Link href="/booking">Booking</Link>
           </li>
         </ul>
         <ul className="mr-4 flex items-center">
@@ -161,56 +151,66 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/"}
             >
-              <Link href="/">Home</Link>
+              <Link href="/" onClick={handleDrawerClose}>
+                Home
+              </Link>
             </li>
             <li
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/stream"}
             >
-              <Link href="/stream">The Stream</Link>
+              <Link href="/stream" onClick={handleDrawerClose}>
+                The Stream
+              </Link>
             </li>
             <li
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/shop"}
             >
-              <Link href="/shop">The (Handmade) Merch</Link>
+              <Link href="/shop" onClick={handleDrawerClose}>
+                The (Handmade) Merch
+              </Link>
             </li>
             <li
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/videos"}
             >
-              <Link href="/videos">Videos</Link>
+              <Link href="/videos" onClick={handleDrawerClose}>
+                Videos
+              </Link>
             </li>
             <li
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/booking"}
             >
-              <Link href="/booking">Booking</Link>
+              <Link href="/booking" onClick={handleDrawerClose}>
+                Booking
+              </Link>
             </li>
           </ul>
           <ul className=" flex items-center justify-center text-[#1e252d]">
             <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://twitch.tv/mildlyaggressivefolk">
+              <a href="https://twitch.tv/mildlyaggressivefolk" onClick={handleDrawerClose}>
                 <TwitchLogo className="h-6 w-6 p-1" />
               </a>
             </li>
             <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://www.youtube.com/@mildlyaggressivefolk">
+              <a href="https://www.youtube.com/@mildlyaggressivefolk" onClick={handleDrawerClose}>
                 <YouTubeLogo />
               </a>
             </li>
             <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://discord.gg/mgZzerpuQe">
+              <a href="https://discord.gg/mgZzerpuQe" onClick={handleDrawerClose}>
                 <DiscordLogo />
               </a>
             </li>
             <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://instagram.com/mildlyaggressivefolk">
+              <a href="https://instagram.com/mildlyaggressivefolk" onClick={handleDrawerClose}>
                 <InstagramLogo />
               </a>
             </li>
             <li className="mx-2 transition-colors hover:text-[#18bfef]">
-              <a href="https://www.facebook.com/mildlyaggressivefolk">
+              <a href="https://www.facebook.com/mildlyaggressivefolk" onClick={handleDrawerClose}>
                 <FacebookLogo />
               </a>
             </li>
