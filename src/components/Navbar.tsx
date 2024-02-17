@@ -151,7 +151,13 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/"}
             >
-              <Link href="/" onClick={handleDrawerClose}>
+              <Link
+                href="/"
+                onClick={() => {
+                  handleDrawerClose();
+                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
+                }}
+              >
                 Home
               </Link>
             </li>
@@ -159,7 +165,13 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/stream"}
             >
-              <Link href="/stream" onClick={handleDrawerClose}>
+              <Link
+                href="/stream"
+                onClick={() => {
+                  handleDrawerClose();
+                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
+                }}
+              >
                 The Stream
               </Link>
             </li>
@@ -167,7 +179,13 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/shop"}
             >
-              <Link href="/shop" onClick={handleDrawerClose}>
+              <Link
+                href="/shop"
+                onClick={() => {
+                  handleDrawerClose();
+                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
+                }}
+              >
                 The (Handmade) Merch
               </Link>
             </li>
@@ -175,7 +193,13 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/videos"}
             >
-              <Link href="/videos" onClick={handleDrawerClose}>
+              <Link
+                href="/videos"
+                onClick={() => {
+                  handleDrawerClose();
+                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
+                }}
+              >
                 Videos
               </Link>
             </li>
@@ -183,7 +207,13 @@ export function Navbar() {
               className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
               data-active={pathname === "/booking"}
             >
-              <Link href="/booking" onClick={handleDrawerClose}>
+              <Link
+                href="/booking"
+                onClick={() => {
+                  handleDrawerClose();
+                  document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
+                }}
+              >
                 Booking
               </Link>
             </li>

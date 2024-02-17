@@ -25,6 +25,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <div
+        id="wrapper"
         className={`relative h-screen w-screen overflow-x-clip overflow-y-scroll ${sourceSans3.className} ${styles.bg}`}
       >
         {pathname === "/" ? <Hero /> : <HeaderBadge />}
