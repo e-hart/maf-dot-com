@@ -3,13 +3,9 @@ import { useIntersectionObserver } from "~/hooks/useIntersectionObserver";
 
 export default function Hero() {
   const { isIntersecting, ref } = useIntersectionObserver({ rootMargin: "-30%" });
-  const style = useMemo(() => {
-    if (isIntersecting) {
-      return { opacity: "1", transition: "all 0.5s" };
-    } else {
-      return { opacity: "0", transition: "all 0.5s" };
-    }
-  }, [isIntersecting]);
+  const style = isIntersecting
+    ? { opacity: "1", transition: "all 0.5s" }
+    : { opacity: "0", transition: "all 0.5s" };
 
   const scrollToFeatured = () => {
     document.getElementById("scrollToMaf")?.scrollIntoView({ behavior: "smooth" });
