@@ -2,8 +2,8 @@ import Button from "~/components/Button";
 
 export default function Booking() {
   return (
-    <section id="featured" className="flex flex-col items-center pt-16">
-      <article className="flex flex-col items-center border-b border-neutral-200">
+    <section id="featured" className="flex flex-col items-center">
+      <article className="flex flex-col items-center">
         <h1 className="mx-2 text-center indent-[0.1em] text-[2.5rem] font-black uppercase leading-tight tracking-widest sm:text-[3rem] xl:text-[4rem]">
           Book MAF for <br /> your event!
         </h1>
@@ -20,8 +20,8 @@ export default function Booking() {
           Contact us for more information at the link below.
         </p>
         <Button
+          className="mt-16"
           href="mailto:mildlyaggressivefolk@gmail.com?subject=Booking%20Inquiry"
-          className="mt-20"
         >
           Contact MAF
         </Button>

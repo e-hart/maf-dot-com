@@ -3,7 +3,7 @@ import Button from "./Button";
 
 export default function Featured() {
   return (
-    <section id="featured" className="flex flex-col items-center divide-y pt-20 ">
+    <section id="featured" className="flex flex-col items-center">
       <article className="flex flex-col items-center  border-neutral-200">
         <h1 className="text-center indent-[0.1em] text-[4rem] font-black tracking-widest">
           NEW MERCH!
@@ -27,53 +27,57 @@ export default function Featured() {
       </article>
       <section
         id="links"
-        className="sm:divide flex w-full flex-wrap justify-around sm:flex-nowrap sm:divide-x"
+        className="sm:divide flex w-full flex-wrap justify-around divide-y sm:flex-nowrap sm:divide-x"
       >
-        <article className="flex flex-col text-center sm:basis-1/2">
-          <h3 className="mt-16 text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
-            WATCH US LIVE
-            <br />
-            ON TWITCH!
-          </h3>
-          <div className="not-subtle-shadow relative z-20 mx-auto mt-10 w-3/4 p-4 transition-transform hover:scale-[1.01]">
-            <div className="vignette">
-              <img src="/images/stream.png" alt="MAF performing on stream" />
+        <article className="grid grid-rows-[1fr_auto] gap-16 border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
+          <div className="flex flex-col justify-around gap-16">
+            <h3 className=" text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
+              WATCH US LIVE
+              <br />
+              ON TWITCH!
+            </h3>
+            <div className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]">
+              <div className="vignette">
+                <img src="/images/stream.png" alt="MAF performing on stream" />
+              </div>
             </div>
+            <p className=" px-8 text-center font-sans font-light">
+              We stream live every week!
+              <br /> Follow us on Twitch to get notified when we go live.
+            </p>
           </div>
-          <p className="mt-16 p-8 text-center font-sans font-light">
-            We stream live every week!
-            <br /> Follow us on Twitch to get notified when we go live.
-          </p>
           <Button
             href="https://twitch.tv/MildlyAggressiveFolk"
             rel="noopener noreferrer"
             target="_blank"
-            className="mx-auto mb-12 mt-16"
+            className="mx-auto"
           >
             Visit Twitch Channel
           </Button>
         </article>
-        <article className="flex flex-col text-center sm:basis-1/2">
-          <h3 className="mt-16 text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
-            CHECK OUT OUR
-            <br />
-            YOUTUBE CHANNEL!
-          </h3>
-          <div className="not-subtle-shadow relative z-20 mx-auto mt-10 w-3/4 p-4 transition-transform hover:scale-[1.01]">
-            <div className="vignette">
-              <img src="/images/youtube_outro_image.png" alt="MAF Video Outro Image" />
+        <article className="grid grid-rows-[1fr_auto] gap-16 border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
+          <div className="flex flex-col justify-around gap-16">
+            <h3 className=" text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
+              CHECK OUT OUR
+              <br />
+              YOUTUBE CHANNEL!
+            </h3>
+            <div className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]">
+              <div className="vignette">
+                <img src="/images/youtube_outro_image.png" alt="MAF Video Outro Image" />
+              </div>
             </div>
+            <p className=" text-balance px-8 text-center font-sans font-light">
+              New videos every week, listen to MAF on the go!
+              <br />
+              Subscribe to our channel to get notified when we post new videos.
+            </p>
           </div>
-          <p className="mt-16 p-8 text-center font-sans font-light">
-            New videos every week, listen to MAF on the go!
-            <br />
-            Subscribe to our channel to get notified when we post new videos.
-          </p>
           <Button
             href="https://youtube.com/@MildlyAggressiveFolk"
             rel="noopener noreferrer"
             target="_blank"
-            className="mx-auto mb-12 mt-16"
+            className="mx-auto"
           >
             Visit Youtube Channel
           </Button>

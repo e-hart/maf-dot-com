@@ -4,7 +4,7 @@ export default function EmailFooter() {
       <h3 className=" font-black uppercase text-neutral-500">Email</h3>
       <a
         href="mailto:mildlyaggressivefolk@gmail.com"
-        className="border-b border-dotted border-neutral-500 font-sans font-thin transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
+        className="border-b border-dotted border-neutral-500 font-sans font-thin text-[#212931] transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
       >
         mildlyaggressivefolk@gmail.com
       </a>

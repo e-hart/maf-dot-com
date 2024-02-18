@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useIsomorphicLayoutEffect } from "./useIsomorphicLayoutEffect";
 
 export default function useIsMobile() {
   const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
+
+  useIsomorphicLayoutEffect(() => {
     if (typeof window === "undefined") return;
+    
     const w = window.innerWidth;
     if (w < 1280) {
       setIsMobile(true);
@@ -23,5 +26,6 @@ export default function useIsMobile() {
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return isMobile;
 }

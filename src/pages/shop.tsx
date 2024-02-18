@@ -2,8 +2,8 @@ import Button from "~/components/Button";
 
 export default function Shop() {
   return (
-    <section id="featured" className="flex flex-col items-center pt-16">
-      <article className="flex flex-col items-center border-b border-neutral-200">
+    <section id="featured" className="flex flex-col items-center">
+      <article className="flex flex-col items-center">
         <h1 className="mx-2 text-center indent-[0.1em] text-[2.5rem] font-black uppercase leading-tight tracking-widest sm:text-[3rem] xl:text-[4rem]">
           Check out our <br /> handmade merch!
         </h1>

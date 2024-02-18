@@ -2,14 +2,13 @@ import Button from "~/components/Button";
 
 export default function Stream() {
   return (
-    <section id="featured" className="flex flex-col items-center pt-16 ">
-      <article className="flex flex-col items-center border-b border-neutral-200">
+    <section id="featured" className="flex flex-col items-center">
+      <article className="flex flex-col items-center ">
         <h1 className="mx-2 text-center indent-[0.1em] text-[2.5rem] font-black uppercase leading-tight tracking-widest sm:text-[3rem] xl:text-[4rem]">
           Watch MAF live <br /> on <span className="text-[#6441A4]">Twitch</span>!
         </h1>
-        <p className=" mx-12 mt-20 text-center font-sans font-extralight leading-tight">
-          MildlyAggressiveFolk streams live on Twitch.tv
-          <br /> multiple times a week.
+        <p className=" mx-12 mt-20 text-balance text-center font-sans font-extralight leading-relaxed">
+          MildlyAggressiveFolk streams live on Twitch.tv multiple times a week.
           <br />
           <br />
           Join our <a href="https://discord.gg/mgZzerpuQe">Discord</a> for the latest updates on
