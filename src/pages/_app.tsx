@@ -37,9 +37,11 @@ export default function App({ Component, pageProps }: AppProps) {
           <main className="z-10 w-full overflow-clip bg-white py-24 text-[#212931] shadow-[-20px_0_20px_-20px_#0008,_20px_0_20px_-20px_#0008]">
             <Component {...pageProps} />
           </main>
+
           {pathname === "/" && <EmailFooter />}
           <SocialFooter />
         </div>
+
         <CopyrightFooter />
       </div>
     </>

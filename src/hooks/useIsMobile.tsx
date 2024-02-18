@@ -6,22 +6,12 @@ export default function useIsMobile() {
 
   useIsomorphicLayoutEffect(() => {
     if (typeof window === "undefined") return;
-    
-    const w = window.innerWidth;
-    if (w < 1280) {
-      setIsMobile(true);
-    } else {
-      setIsMobile(false);
-    }
 
     function handleResize() {
-      if (window.innerWidth < 1280) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
+      setIsMobile(window.innerWidth < 1280);
     }
 
+    handleResize();
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);

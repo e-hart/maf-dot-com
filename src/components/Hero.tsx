@@ -29,6 +29,7 @@ export default function Hero() {
           <br />
           Folk
         </h1>
+
         <br />
         <p
           id="scrollToMaf"
@@ -38,12 +39,14 @@ export default function Hero() {
           Atlanta based Twitch-streaming string duo
         </p>
         <br />
+
         <div
           style={{ ...style }}
           className="z-20 m-2 h-fit w-fit rounded-full border-2 border-white p-4 text-[24px] transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
         >
           <DownArrow onClick={scrollToFeatured} />
         </div>
+
         <div
           className="absolute bottom-20 z-10 mt-4 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
           style={{ opacity: isIntersecting ? "0" : "1", transition: "all 0.5s" }}

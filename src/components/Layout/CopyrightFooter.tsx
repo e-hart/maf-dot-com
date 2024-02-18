@@ -6,13 +6,13 @@ export default function CopyrightFooter() {
     >
       <ul className="flex flex-wrap items-center justify-around indent-[0.1em] text-sm font-black uppercase tracking-widest text-neutral-200">
         <li className="px-2">&copy; Mildly Aggressive Folk {new Date().getFullYear()}</li>
+
         <li className="px-2 text-center text-xs">
           Built by{" "}
           <a
             className="text-neutral-400 transition-colors hover:text-[#18bfef]"
             href="https://evanh.art"
           >
-            {" "}
             Evan Hart
           </a>
           <br />
