@@ -29,65 +29,78 @@ export default function Featured() {
         id="links"
         className="sm:divide flex w-full flex-wrap divide-y sm:flex-nowrap sm:divide-x"
       >
-        <article className="grid grid-rows-[1fr_auto] gap-16 border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
-          <div className="flex flex-col justify-around gap-16">
+        <article className="grid grid-rows-[1fr_auto] border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
+          <div className="flex flex-col *:my-8">
             <h3 className=" text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
               WATCH US LIVE
               <br />
               ON TWITCH!
             </h3>
 
-            <div className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]">
+            <a
+              href="https://twitch.tv/MildlyAggressiveFolk"
+              className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <div className="vignette">
                 <img src="/images/stream.png" alt="MAF performing on stream" />
               </div>
-            </div>
+            </a>
 
             <p className=" px-8 text-center font-sans font-light">
               We stream live every week!
-              <br /> Follow us on Twitch to get notified when we go live.
+              <br /> Follow us on Twitch to be notified when we go live.
             </p>
-          </div>
 
-          <Button
-            href="https://twitch.tv/MildlyAggressiveFolk"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="mx-auto"
-          >
-            Visit Twitch Channel
-          </Button>
+            <Button
+              href="https://twitch.tv/MildlyAggressiveFolk"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="mx-auto"
+            >
+              Visit Twitch
+            </Button>
+          </div>
         </article>
 
-        <article className="grid grid-rows-[1fr_auto] gap-16 border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
-          <div className="flex flex-col justify-around gap-16">
+        <article className="grid grid-rows-[1fr_auto] border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
+          <div className="flex flex-col *:my-8">
             <h3 className=" text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
               CHECK OUT OUR
               <br />
               YOUTUBE CHANNEL!
             </h3>
 
-            <div className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]">
+            <a
+              href="https://youtube.com/@MildlyAggressiveFolk"
+              className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <div className="vignette">
                 <img src="/images/youtube_outro_image.png" alt="MAF Video Outro Image" />
               </div>
+            </a>
+
+            <div>
+              <p className=" text-balance px-4 text-center font-sans font-light">
+                New videos every week, listen to MAF on the go!
+              </p>
+              <p className=" text-balance px-4 text-center font-sans font-light">
+                Subscribe to our channel to get notified when we post new videos.
+              </p>
             </div>
 
-            <p className=" text-balance px-8 text-center font-sans font-light">
-              New videos every week, listen to MAF on the go!
-              <br />
-              Subscribe to our channel to get notified when we post new videos.
-            </p>
+            <Button
+              href="https://youtube.com/@MildlyAggressiveFolk"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="mx-auto"
+            >
+              Visit Youtube
+            </Button>
           </div>
-
-          <Button
-            href="https://youtube.com/@MildlyAggressiveFolk"
-            rel="noopener noreferrer"
-            target="_blank"
-            className="mx-auto"
-          >
-            Visit Youtube Channel
-          </Button>
         </article>
       </section>
     </section>
