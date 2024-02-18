@@ -48,7 +48,7 @@ export default function Hero() {
         </div>
 
         <div
-          className="absolute bottom-20 z-10 mt-4 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
+          className="absolute bottom-16 z-10 mt-4 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
           style={{ opacity: isIntersecting ? "0" : "1", transition: "all 0.5s" }}
         >
           <h1 style={{ letterSpacing: ".125em", textIndent: ".125em" }}>MAF</h1>
