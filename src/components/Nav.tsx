@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+
 import {
   ArrowRightIcon,
   DiscordLogo,
@@ -9,6 +10,7 @@ import {
   TwitchLogo,
   YouTubeLogo,
 } from "~/components/Logos";
+
 import useIsMobile from "~/hooks/useIsMobile";
 import { useOnClickOutside } from "~/hooks/useOnClickOutside";
 
@@ -20,7 +22,7 @@ const routes = [
   { name: "Booking", path: "/booking" },
 ];
 
-const socialLinks = [
+export const socialLinks = [
   { name: "Twitch", href: "https://twitch.tv/mildlyaggressivefolk", Logo: TwitchLogo },
   { name: "YouTube", href: "https://www.youtube.com/@mildlyaggressivefolk", Logo: YouTubeLogo },
   { name: "Discord", href: "https://discord.gg/mgZzerpuQe", Logo: DiscordLogo },
@@ -28,10 +30,9 @@ const socialLinks = [
   { name: "Facebook", href: "https://www.facebook.com/mildlyaggressivefolk", Logo: FacebookLogo },
 ];
 
-export function Navbar() {
+export function Nav() {
   const pathname = useRouter().pathname;
   const isMobile = useIsMobile();
-
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const ref = useRef<HTMLDivElement>(null);
@@ -40,7 +41,6 @@ export function Navbar() {
   function handleDrawerOpen() {
     setIsDrawerOpen(true);
   }
-
   function handleDrawerClose() {
     setIsDrawerOpen(false);
   }

@@ -7,7 +7,7 @@ const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
 import { createContext } from "react";
 import Hero from "~/components/Hero";
-import { Navbar } from "~/components/Navbar";
+import { Nav } from "~/components/Nav";
 import { useRouter } from "next/router";
 import CopyrightFooter from "~/components/CopyrightFooter";
 import SocialFooter from "~/components/SocialFooter";
@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
       >
         {pathname === "/" ? <Hero /> : <HeaderBadge />}
         <div className="slide-from-bottom mx-auto flex h-fit min-h-screen w-full flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
-          <Navbar />
+          <Nav />
           <main className="z-10 w-full overflow-clip bg-white pt-8 text-[#212931] shadow-[-20px_0_20px_-20px_#0008,_20px_0_20px_-20px_#0008]">
             <Component {...pageProps} />
           </main>

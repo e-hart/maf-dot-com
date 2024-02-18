@@ -52,7 +52,7 @@ export function TwitchLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
-      className={props.className ? props.className : "h-6 w-6 p-1"}
+      className={props.className ? `p-1 ${props.className}` : "h-6 w-6 p-1"}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 268"
     >

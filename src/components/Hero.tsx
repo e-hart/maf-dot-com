@@ -1,8 +1,8 @@
-import { useMemo } from "react";
 import { useIntersectionObserver } from "~/hooks/useIntersectionObserver";
 
 export default function Hero() {
   const { isIntersecting, ref } = useIntersectionObserver({ rootMargin: "-30%" });
+
   const style = isIntersecting
     ? { opacity: "1", transition: "all 0.5s" }
     : { opacity: "0", transition: "all 0.5s" };
