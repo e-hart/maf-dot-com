@@ -7,13 +7,6 @@ export default function Featured() {
       <article className="flex flex-col items-center gap-20 pb-20 pt-4">
         <h1 className="text-center text-[4rem] font-black tracking-widest">NEW MERCH!</h1>
 
-        <p className="mx-8 text-center font-sans font-extralight leading-none">
-          The new Honey Bear Handmade crossbody bag, available in many styles (including Rifle Paper
-          Co.)! <br />
-          <br />
-          Check out the shop for the crossbody and other Stephanie-made merch.
-        </p>
-
         <div className="not-subtle-shadow relative z-20 mx-auto w-11/12 p-4 transition-transform hover:scale-[1.01]">
           <Link href="/shop">
             <div className="vignette">
@@ -21,6 +14,13 @@ export default function Featured() {
             </div>
           </Link>
         </div>
+
+        <p className="mx-8 text-center font-sans font-extralight leading-none">
+          The new Honey Bear Handmade crossbody bag, available in many styles (including Rifle Paper
+          Co.)! <br />
+          <br />
+          Check out the shop for the crossbody and other Stephanie-made merch.
+        </p>
 
         <Button href="/">Shop Now</Button>
       </article>
