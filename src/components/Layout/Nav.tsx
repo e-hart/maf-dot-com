@@ -51,7 +51,7 @@ export function Nav() {
         id="nav"
         className="z-0 flex w-full justify-between bg-[#ffffff2e] shadow-[0_0_10px_0_#0008]"
       >
-        <ul className=" flex w-full items-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
+        <ul className=" flex w-full items-center text-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
           {routes.map((route) => (
             <Link key={route.path} href={route.path}>
               <li style={{ transition: "background 0.5s" }} data-active={pathname === route.path}>
