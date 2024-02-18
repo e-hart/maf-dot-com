@@ -17,7 +17,18 @@ import { useOnClickOutside } from "~/hooks/useOnClickOutside";
 const routes = [
   { name: "Home", path: "/" },
   { name: "The Stream", path: "/stream" },
-  { name: "The (Handmade) Merch", path: "/shop" },
+  {
+    name: (
+      <span className="flex">
+        The&nbsp;
+        <div className="origin-center transition-transform group-hover:scale-110">
+          (Handmade)&nbsp;
+        </div>
+        Merch
+      </span>
+    ),
+    path: "/shop",
+  },
   { name: "Videos", path: "/videos" },
   { name: "Booking", path: "/booking" },
 ];
@@ -49,12 +60,16 @@ export function Nav() {
     return (
       <nav
         id="nav"
-        className="z-0 flex w-full justify-between bg-[#ffffff2e] shadow-[0_0_10px_0_#0008]"
+        className="z-30 flex w-full justify-between bg-[#ffffff2e] shadow-[0_-10px_15px_-10px_#0008]"
       >
-        <ul className=" flex w-full items-center text-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
+        <ul className=" flex w-full select-none items-center text-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
           {routes.map((route) => (
             <Link key={route.path} href={route.path}>
-              <li style={{ transition: "background 0.5s" }} data-active={pathname === route.path}>
+              <li
+                style={{ transition: "background 0.15s" }}
+                className="group hover:bg-[linear-gradient(to_right,transparent,_#00000010_35%,_#00000010_65%,_transparent_100%)] data-[active=true]:bg-none"
+                data-active={pathname === route.path}
+              >
                 {route.name}
               </li>
             </Link>

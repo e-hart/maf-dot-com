@@ -2,7 +2,7 @@ export default function CopyrightFooter() {
   return (
     <div
       id="copyright"
-      className="bg w-full bg-[image:linear-gradient(to_right,_#0000_10%,_#0008_50%,_#0000_90%)] py-12 sm:px-24"
+      className="bg w-full bg-[image:linear-gradient(to_right,_#0000_20%,_#0008_30%,_#0008_70%,_#0000_80%)] py-12 sm:px-24 xl:px-64"
     >
       <ul className="flex flex-wrap items-center justify-around indent-[0.1em] text-sm font-black uppercase tracking-widest text-neutral-200">
         <li className="px-2">&copy; Mildly Aggressive Folk {new Date().getFullYear()}</li>
