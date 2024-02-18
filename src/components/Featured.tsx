@@ -64,7 +64,7 @@ export default function Featured() {
           </div>
         </article>
 
-        <article className="grid grid-rows-[1fr_auto] border-t border-neutral-200 px-4 py-16 text-center sm:basis-1/2">
+        <article className="grid grid-rows-[1fr_auto] border-t border-neutral-200 px-4 pt-16 text-center sm:basis-1/2">
           <div className="flex flex-col *:my-8">
             <h3 className=" text-center indent-[0.1em] text-[1.75rem] font-black leading-tight tracking-widest">
               CHECK OUT OUR
