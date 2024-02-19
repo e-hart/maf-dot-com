@@ -9,7 +9,7 @@ import {
   InstagramLogo,
   TwitchLogo,
   YouTubeLogo,
-} from "~/components/Logos";
+} from "~/components/Layout/Logos";
 
 import useIsMobile from "~/hooks/useIsMobile";
 import { useOnClickOutside } from "~/hooks/useOnClickOutside";

@@ -41,10 +41,11 @@ export default function Hero() {
         <br />
 
         <div
-          style={{ ...style }}
-          className="z-20 m-2 h-fit w-fit rounded-full border-2 border-white p-4 text-[24px] transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
+          style={{ ...style, cursor: isIntersecting ? "pointer" : "default" }}
+          className="z-20 m-2 h-fit w-fit cursor-pointer rounded-full border-2 border-white p-4 text-[24px] transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
+          onClick={scrollToFeatured}
         >
-          <DownArrow onClick={scrollToFeatured} />
+          <DownArrow />
         </div>
 
         <div
