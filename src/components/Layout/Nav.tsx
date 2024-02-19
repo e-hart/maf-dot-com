@@ -66,8 +66,7 @@ export function Nav() {
           {routes.map((route) => (
             <Link key={route.path} href={route.path}>
               <li
-                style={{ transition: "background 0.15s" }}
-                className="group hover:bg-[linear-gradient(to_right,transparent,_#00000010_35%,_#00000010_65%,_transparent_100%)] data-[active=true]:bg-none"
+                className="group [transition:background_0.15s] hover:bg-[linear-gradient(to_right,transparent,_#00000010_35%,_#00000010_65%,_transparent_100%)] data-[active=true]:bg-none"
                 data-active={pathname === route.path}
               >
                 {route.name}

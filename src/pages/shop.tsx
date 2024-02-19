@@ -17,6 +17,7 @@ export default function Shop() {
       buttonText="Visit the Shop"
       imgSrc="/images/crossbody.jpg"
       imgAlt="Handmade merch"
+      vignette
       href="https://etsy.com/shop/honeybearhandmade"
     />
   );

@@ -7,6 +7,7 @@ export default function PageTemplate({
   imgSrc,
   imgAlt,
   href,
+  vignette,
 }: {
   headline: string | JSX.Element;
   description: string | JSX.Element;
@@ -14,6 +15,7 @@ export default function PageTemplate({
   imgSrc: string;
   imgAlt: string;
   href: string;
+  vignette?: boolean;
 }) {
   return (
     <section className="flex flex-col items-center gap-20 sm:p-4">
@@ -29,7 +31,9 @@ export default function PageTemplate({
 
       <div className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]">
         <a href={href} rel="noopener noreferrer" target="_blank">
-          <img src={imgSrc} alt={imgAlt} />
+          <div className={vignette ? "vignette" : ""}>
+            <img src={imgSrc} alt={imgAlt} />
+          </div>
         </a>
       </div>
     </section>

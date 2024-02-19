@@ -14,14 +14,13 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      style={{ transition: "all 0.5s" }}
-      className="relative flex h-[92vh] select-none flex-col items-center justify-center pt-[40vh]"
+      className="relative flex h-[92vh] select-none flex-col items-center justify-center pt-[40vh] text-center [transition:all_0.5s]"
     >
       <div className="flex flex-col items-center justify-center">
         <h1
           ref={ref}
-          style={{ ...style, letterSpacing: "0.075em", textIndent: "0.075em" }}
-          className={`text-shadow font-[spacing:_1rem] text-center text-[2.75rem] font-black uppercase leading-none sm:text-[5rem]`}
+          style={{ ...style }}
+          className={`text-shadow font-[spacing:_1rem] indent-[.075em] text-[2.75rem] font-black uppercase leading-none tracking-[.075em] sm:text-[5rem]`}
         >
           Mildly
           <br />
@@ -31,11 +30,7 @@ export default function Hero() {
         </h1>
 
         <br />
-        <p
-          id="scrollToMaf"
-          style={{ ...style }}
-          className="my-4 px-4 text-center text-xl font-thin italic"
-        >
+        <p id="scrollToMaf" style={{ ...style }} className="my-4 px-4 text-xl font-thin italic">
           Atlanta based Twitch-streaming string duo
         </p>
         <br />
@@ -52,7 +47,7 @@ export default function Hero() {
           className="absolute bottom-16 z-10 mt-4 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
           style={{ opacity: isIntersecting ? "0" : "1", transition: "all 0.5s" }}
         >
-          <h1 style={{ letterSpacing: ".125em", textIndent: ".125em" }}>MAF</h1>
+          <h1 className="indent-[.125em] tracking-[.125em]">MAF</h1>
         </div>
       </div>
     </div>

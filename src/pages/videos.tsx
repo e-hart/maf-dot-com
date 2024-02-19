@@ -19,6 +19,7 @@ export default function Videos() {
       buttonText="MAF's YouTube Channel"
       imgSrc="/images/youtube_outro_image.png"
       imgAlt="MAF's YouTube outro"
+      vignette
       href="https://youtube.com/@mildlyaggressivefolk"
     />
   );

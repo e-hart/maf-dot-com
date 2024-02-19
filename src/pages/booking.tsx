@@ -25,6 +25,7 @@ export default function Booking() {
       buttonText="Contact MAF"
       imgSrc="/images/blurryvio.jpg"
       imgAlt="Event with MAF"
+      vignette
       href="mailto:mildlyaggressivefolk@gmail.com?subject=Booking%20Inquiry"
     />
   );
