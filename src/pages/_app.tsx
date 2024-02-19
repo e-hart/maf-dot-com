@@ -34,7 +34,6 @@ export default function App({ Component, pageProps }: AppProps) {
         {pathname === "/" && <EmailFooter />}
         <SocialFooter />
       </div>
-
       <CopyrightFooter />
     </div>
   );
