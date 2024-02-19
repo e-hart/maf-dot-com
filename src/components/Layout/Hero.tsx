@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative flex h-[92vh] select-none flex-col items-center justify-center pt-[40vh] text-center [transition:all_0.5s]"
+      className="relative flex min-h-[92vh] select-none flex-col items-center justify-end pb-20 pt-20 text-center [transition:all_0.5s] sm:pb-12"
     >
       <div className="flex flex-col items-center justify-center">
         <h1
@@ -45,7 +45,12 @@ export default function Hero() {
 
         <div
           className="absolute bottom-16 z-10 mt-4 select-none border-[5px] border-white px-6 py-2 text-center text-[2.5rem] font-black"
-          style={{ opacity: isIntersecting ? "0" : "1", transition: "all 0.5s" }}
+          style={{
+            opacity: isIntersecting ? "0" : "1",
+            transitionDelay: isIntersecting ? "0s" : "0.3s",
+            transitionProperty: "all",
+            transitionDuration: isIntersecting ? "0.3s" : "0.5s",
+          }}
         >
           <h1 className="indent-[.125em] tracking-[.125em]">MAF</h1>
         </div>
