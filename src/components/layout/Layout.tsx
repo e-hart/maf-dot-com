@@ -48,7 +48,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         {isMobile ? <Nav /> : null}
         <div className="mx-auto flex h-fit w-full animate-in-from-bottom flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
           {!isMobile ? <Nav /> : null}
-          <main className="z-10 w-full overflow-clip bg-white py-24 text-primary ">{children}</main>
+          <main className="z-10 w-full overflow-clip bg-white py-12 text-primary sm:py-24 ">
+            {children}
+          </main>
           {pathname === "/" && <EmailFooter />}
           <SocialFooter />
         </div>
