@@ -11,11 +11,13 @@ import { useRouter } from "next/router";
 import useScrollToTop from "~/hooks/useScrollToTop";
 
 import { Source_Sans_3 } from "next/font/google";
+import useIsMobile from "~/hooks/useIsMobile";
 const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = useRouter().pathname;
   useScrollToTop(pathname);
+  const isMobile = useIsMobile();
 
   return (
     <>
@@ -43,8 +45,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <div id="wrapper" className={`bg-wrapper ${sourceSans3.className}`}>
         {pathname === "/" ? <Hero /> : <HeaderBadge />}
+        {isMobile ? <Nav /> : null}
         <div className="mx-auto flex h-fit w-full animate-in-from-bottom flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
-          <Nav />
+          {!isMobile ? <Nav /> : null}
           <main className="z-10 w-full overflow-clip bg-white py-24 text-primary ">{children}</main>
           {pathname === "/" && <EmailFooter />}
           <SocialFooter />

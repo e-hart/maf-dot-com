@@ -24,9 +24,14 @@ const config: Config = {
           "0%": { transform: "translateY(100%)" },
           "100%": { transform: "translateY(0)" },
         },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "in-from-bottom": "in-from-bottom 1s ease-out",
+        "fade-in": "fade-in 2s ease-out",
       },
       boxShadow: {
         heavy: "0 0 1rem 0 rgba(0,0,0,0.5)",

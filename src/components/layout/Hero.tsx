@@ -14,7 +14,7 @@ export default function Hero() {
   return (
     <div
       id="hero"
-      className="relative flex min-h-[92vh] select-none flex-col items-center justify-end pb-20 pt-20 text-center [transition:all_0.5s] sm:pb-12"
+      className="relative flex min-h-[92vh] select-none flex-col items-center justify-end pb-4 pt-20 text-center [transition:all_0.5s] sm:pb-12"
     >
       <div className="flex flex-col items-center justify-center">
         <h1

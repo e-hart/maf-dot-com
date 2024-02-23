@@ -91,7 +91,7 @@ export function Nav() {
       <>
         <button
           onClick={handleDrawerOpen}
-          className="fixed right-4 top-4 z-50 bg-white p-2 indent-[0.1em] text-sm font-black uppercase tracking-widest text-primary shadow-heavy transition-colors hover:text-highlight"
+          className="animate-fade-in fixed right-4 top-4 z-50 bg-white p-2 indent-[0.1em] text-sm font-black uppercase tracking-widest text-primary shadow-heavy transition-colors hover:text-highlight"
         >
           Menu
         </button>
