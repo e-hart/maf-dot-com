@@ -9,7 +9,7 @@ import {
   InstagramLogo,
   TwitchLogo,
   YouTubeLogo,
-} from "~/components/Layout/Logos";
+} from "~/components/layout/Logos";
 
 import useIsMobile from "~/hooks/useIsMobile";
 import { useOnClickOutside } from "~/hooks/useOnClickOutside";
@@ -60,13 +60,13 @@ export function Nav() {
     return (
       <nav
         id="nav"
-        className="z-30 flex w-full justify-between bg-[#ffffff2e] shadow-[0_-10px_15px_-10px_#0008]"
+        className="z-30 flex w-full justify-between bg-[#ffffff2e] shadow-[0_-10px_15px_-10px_#0008aaa] "
       >
-        <ul className=" flex w-full select-none items-center text-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] data-[active=true]:text-[#1e252d] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-[#1e252d] [&_li]:px-8 [&_li]:py-6 [&_li]:hover:data-[active=false]:bg-[#fff4]">
+        <ul className=" flex w-full select-none items-center text-center indent-[0.075em] text-[.8rem] font-black uppercase tracking-[0.075em] [&_li[data-active=true]]:bg-white [&_li[data-active=true]]:text-primary">
           {routes.map((route) => (
             <Link key={route.path} href={route.path}>
               <li
-                className="group [transition:background_0.15s] hover:bg-[linear-gradient(to_right,transparent,_#00000010_35%,_#00000010_65%,_transparent_100%)] data-[active=true]:bg-none"
+                className="group px-8 py-6 transition data-[active=true]:shadow-[-20px_-3px_20px_-20px_#0006,20px_-3px_20px_-20px_#0006] hover:data-[active=false]:scale-105 hover:data-[active=false]:bg-[linear-gradient(to_right,transparent_0%,#fff1_12%,#fff1_88%,transparent_100%)]"
                 data-active={pathname === route.path}
               >
                 {route.name}
@@ -76,7 +76,7 @@ export function Nav() {
         </ul>
         <ul className="mr-4 flex items-center">
           {socialLinks.map((link) => (
-            <li key={link.name} className="mx-2 transition-colors hover:text-[#18bfef]">
+            <li key={link.name} className="mx-2 transition-colors hover:text-highlight">
               <a href={link.href}>
                 <link.Logo />
               </a>
@@ -91,7 +91,7 @@ export function Nav() {
       <>
         <button
           onClick={handleDrawerOpen}
-          className="fixed right-4 top-4 z-50 bg-white p-2 indent-[0.1em] text-sm font-black uppercase tracking-widest text-[#1e252d] shadow-[0_0_5px_1px_#0007] transition-colors hover:text-[#18bfef]"
+          className="fixed right-4 top-4 z-50 bg-white p-2 indent-[0.1em] text-sm font-black uppercase tracking-widest text-primary shadow-heavy transition-colors hover:text-highlight"
         >
           Menu
         </button>
@@ -100,17 +100,17 @@ export function Nav() {
           ref={ref}
           id="nav"
           style={{ transform: isDrawerOpen ? "translateX(0)" : "translateX(100%)" }}
-          className="fixed right-0 top-0 z-[100] flex h-full w-64 flex-col justify-center gap-12 bg-white shadow-[0_0_10px_0_#0008] transition-transform"
+          className="fixed right-0 top-0 z-[100] flex h-full w-64 flex-col justify-center gap-12 bg-white shadow-heavy transition-transform"
         >
           <ArrowRightIcon
-            className="absolute bottom-4 left-4 h-6 w-6 cursor-pointer text-[#1e252d] transition-colors hover:text-[#18bfef]"
+            className="absolute bottom-4 left-4 size-6 cursor-pointer text-primary transition-colors hover:text-highlight"
             onClick={handleDrawerClose}
           />
-          <ul className="mt-20 flex w-full flex-col items-center gap-8 indent-[0.1em] text-[.8rem] font-black uppercase tracking-widest text-[#1e252d]">
+          <ul className="mt-20 flex w-full flex-col items-center gap-8 indent-[0.1em] text-[.8rem] font-black uppercase tracking-widest text-primary">
             {routes.map((route) => (
               <li
                 key={route.path}
-                className="border-[#1e252d] transition-colors hover:text-[#18bfef] data-[active=true]:border-b  "
+                className="border-primary transition-colors hover:text-highlight data-[active=true]:border-b"
                 data-active={pathname === route.path}
               >
                 <Link href={route.path} onClick={handleDrawerClose}>
@@ -119,9 +119,9 @@ export function Nav() {
               </li>
             ))}
           </ul>
-          <ul className=" flex items-center justify-center text-[#1e252d]">
+          <ul className=" flex items-center justify-center text-primary">
             {socialLinks.map((link) => (
-              <li key={link.name} className="mx-2 transition-colors hover:text-[#18bfef]">
+              <li key={link.name} className="mx-2 transition-colors hover:text-highlight">
                 <a href={link.href} onClick={handleDrawerClose}>
                   <link.Logo />
                 </a>

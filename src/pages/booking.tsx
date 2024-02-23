@@ -1,4 +1,4 @@
-import PageTemplate from "~/components/Layout/PageTemplate";
+import PageTemplate from "~/components/PageTemplate";
 
 export default function Booking() {
   return (

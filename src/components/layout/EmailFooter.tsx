@@ -5,7 +5,7 @@ export default function EmailFooter() {
 
       <a
         href="mailto:mildlyaggressivefolk@gmail.com"
-        className="border-b border-dotted border-neutral-500 font-sans font-thin text-[#212931] transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
+        className="border-b border-dotted border-neutral-500 font-sans font-thin text-primary transition-colors hover:border-highlight hover:text-highlight"
       >
         mildlyaggressivefolk@gmail.com
       </a>

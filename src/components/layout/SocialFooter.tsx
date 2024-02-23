@@ -9,10 +9,10 @@ export default function SocialFooter() {
         {socialLinks.map((link) => (
           <li
             key={link.name}
-            className="rounded-full border border-neutral-400 p-2 transition-colors hover:border-[#18bfef] hover:text-[#18bfef] sm:p-3"
+            className="rounded-full border border-neutral-400 p-2 transition-colors hover:border-highlight hover:text-highlight sm:p-3"
           >
             <a href={link.href}>
-              <link.Logo className="h-6 w-6" />
+              <link.Logo className="size-6" />
             </a>
           </li>
         ))}

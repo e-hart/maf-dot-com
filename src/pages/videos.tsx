@@ -1,5 +1,4 @@
-import Button from "~/components/Button";
-import PageTemplate from "~/components/Layout/PageTemplate";
+import PageTemplate from "~/components/PageTemplate";
 
 export default function Videos() {
   return (
@@ -11,7 +10,9 @@ export default function Videos() {
       }
       description={
         <>
-          Videos are released every Monday. Subscribe to our YouTube for notifications!
+          Videos are released every Monday.
+          <br />
+          Subscribe to our YouTube for notifications!
           <br />
           (It really does help us A LOT!!!)
         </>

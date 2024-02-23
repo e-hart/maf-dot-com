@@ -1,6 +1,5 @@
-import Link from "next/link";
-import Button from "../Button";
-import IsomorphicLink from "../IsomorphicLink";
+import Button from "./Button";
+import HybridLink from "./HybridLink";
 
 export default function FeaturedSection({
   href,
@@ -23,15 +22,15 @@ export default function FeaturedSection({
     <article className="flex flex-col items-center gap-20 pb-20 pt-4">
       <h1 className="text-center text-[4rem] font-black uppercase tracking-widest">{headline}</h1>
 
-      <IsomorphicLink
+      <HybridLink
         href={href}
         newWindow={newWindow}
-        className="not-subtle-shadow relative z-20 mx-auto w-11/12 p-4 transition-transform hover:scale-[1.01]"
+        className="relative z-20 mx-auto w-11/12 p-4 shadow-heavy transition-transform hover:scale-[1.01]"
       >
         <div className="vignette">
           <img src={imgSrc} alt={imgAlt} />
         </div>
-      </IsomorphicLink>
+      </HybridLink>
 
       <p className="mx-8 text-center font-sans font-extralight leading-none">{description}</p>
 

@@ -20,7 +20,7 @@ export default function Hero() {
         <h1
           ref={ref}
           style={{ ...style }}
-          className={`text-shadow font-[spacing:_1rem] indent-[.075em] text-[2.75rem] font-black uppercase leading-none tracking-[.075em] sm:text-[5rem]`}
+          className={`text-shadow-lg font-[spacing:_1rem] indent-[.075em] text-[2.75rem] font-black uppercase leading-none tracking-[.075em] sm:text-[5rem]`}
         >
           Mildly
           <br />
@@ -37,7 +37,7 @@ export default function Hero() {
 
         <div
           style={{ ...style, cursor: isIntersecting ? "pointer" : "default" }}
-          className="z-20 m-2 h-fit w-fit cursor-pointer rounded-full border-2 border-white p-4 text-[24px] transition-colors hover:border-[#33aaff] hover:text-[#33aaff]"
+          className="z-20 m-2 h-fit w-fit cursor-pointer rounded-full border-2 border-white p-4 text-[24px] transition-colors hover:border-highlight hover:text-highlight"
           onClick={scrollToFeatured}
         >
           <DownArrow />
@@ -64,7 +64,7 @@ interface DownArrowProps extends React.SVGProps<SVGSVGElement> {}
 function DownArrow(props: DownArrowProps) {
   return (
     <svg
-      className="h-6 w-6"
+      className="size-6"
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"

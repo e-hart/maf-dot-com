@@ -1,7 +1,7 @@
 export function DiscordLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      className={props.className ? props.className : "h-6 w-6 "}
+      className={props.className ? props.className : "size-6 "}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -15,7 +15,7 @@ export function DiscordLogo(props: React.SVGProps<SVGSVGElement>) {
 export function FacebookLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      className={props.className ? props.className : "h-6 w-6 "}
+      className={props.className ? props.className : "size-6 "}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -33,7 +33,7 @@ export function FacebookLogo(props: React.SVGProps<SVGSVGElement>) {
 export function YouTubeLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      className={props.className ? props.className : "h-6 w-6 "}
+      className={props.className ? props.className : "size-6 "}
       aria-hidden="true"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
@@ -52,7 +52,7 @@ export function TwitchLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
-      className={props.className ? `p-1 ${props.className}` : "h-6 w-6 p-1"}
+      className={props.className ? `p-1 ${props.className}` : "size-6 p-1"}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 256 268"
     >
@@ -68,7 +68,7 @@ export function InstagramLogo(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       {...props}
-      className={props.className ? props.className : "h-6 w-6 "}
+      className={props.className ? props.className : "size-6 "}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 1024"
     >

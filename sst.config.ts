@@ -11,7 +11,11 @@ export default {
   stacks(app) {
     app.stack(function Site({ stack }) {
       const site = new NextjsSite(stack, "site", {
-        customDomain: "polkfunk.com",
+        customDomain: {
+          domainName: "mildlyaggressivefolk.com",
+          domainAlias: "www.mildlyaggressivefolk.com",
+        },
+        edge: true,
       });
 
       stack.addOutputs({

@@ -1,5 +1,6 @@
-import FeaturedSection from "~/components/Layout/FeaturedSection";
-import SmallFeaturedSection from "~/components/Layout/SmallFeaturedSection";
+import Head from "next/head";
+import FeaturedSection from "~/components/FeaturedSection";
+import SmallFeaturedSection from "~/components/SmallFeaturedSection";
 
 const links = [
   {
@@ -44,7 +45,7 @@ const links = [
 
 export default function Home() {
   return (
-    <section id="featured" className="flex flex-col items-center">
+    <div id="featured" className="flex flex-col items-center">
       <FeaturedSection
         href="/shop"
         imgSrc="/images/crossbody.jpg"
@@ -66,6 +67,6 @@ export default function Home() {
           <SmallFeaturedSection key={i} {...link} />
         ))}
       </section>
-    </section>
+    </div>
   );
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Button from "../Button";
-import IsomorphicLink from "../IsomorphicLink";
+import Button from "./Button";
+import HybridLink from "./HybridLink";
 
 export default function SmallFeaturedSection({
   href,
@@ -24,15 +24,15 @@ export default function SmallFeaturedSection({
           {headline}
         </h3>
 
-        <IsomorphicLink
+        <HybridLink
           href={href}
           newWindow
-          className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]"
+          className="relative z-20 mx-auto w-3/4 p-4 shadow-heavy transition-transform hover:scale-[1.01]"
         >
           <div className="vignette">
             <img src={imgSrc} alt={imgAlt} />
           </div>
-        </IsomorphicLink>
+        </HybridLink>
 
         <p className="text-balance px-8 text-center font-sans font-light">{description}</p>
 

@@ -1,4 +1,6 @@
-import Button from "../Button";
+import Head from "next/head";
+import Button from "./Button";
+import { useRouter } from "next/router";
 
 export default function PageTemplate({
   headline,
@@ -17,8 +19,14 @@ export default function PageTemplate({
   href: string;
   vignette?: boolean;
 }) {
+  const pathname = useRouter().pathname;
+  const formattedPathname = ` | ${pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2)}`;
+
   return (
-    <section className="flex flex-col items-center gap-20 sm:p-4">
+    <div className="flex flex-col items-center gap-20 sm:p-4">
+      <Head>
+        <title>{`Mildly Aggressive Folk${formattedPathname}`}</title>
+      </Head>
       <h1 className="mx-2 text-center text-[2.5rem] font-black uppercase leading-tight tracking-widest sm:text-[3rem] xl:text-[4rem]">
         {headline}
       </h1>
@@ -29,13 +37,13 @@ export default function PageTemplate({
         {buttonText}
       </Button>
 
-      <div className="not-subtle-shadow relative z-20 mx-auto w-3/4 p-4 transition-transform hover:scale-[1.01]">
+      <div className="relative z-20 mx-auto w-3/4 p-4 shadow-heavy transition-transform hover:scale-[1.01]">
         <a href={href} rel="noopener noreferrer" target="_blank">
           <div className={vignette ? "vignette" : ""}>
             <img src={imgSrc} alt={imgAlt} />
           </div>
         </a>
       </div>
-    </section>
+    </div>
   );
 }
