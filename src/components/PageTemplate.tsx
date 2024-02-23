@@ -2,6 +2,7 @@ import Head from "next/head";
 import Button from "./Button";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function PageTemplate({
   headline,
@@ -22,6 +23,10 @@ export default function PageTemplate({
 }) {
   const pathname = useRouter().pathname;
   const formattedPathname = ` | ${pathname.slice(1).charAt(0).toUpperCase() + pathname.slice(2)}`;
+
+  useEffect(() => {
+    document.getElementById("wrapper")?.scroll({ behavior: "smooth", top: 0 });
+  }, []);
 
   return (
     <div className="flex flex-col items-center gap-20 sm:p-4">
