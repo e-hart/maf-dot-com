@@ -15,7 +15,8 @@ import useIsMobile from "~/hooks/useIsMobile";
 const sourceSans3 = Source_Sans_3({ subsets: ["latin"] });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const pathname = useRouter().pathname;
+  const router = useRouter();
+  const pathname = router.pathname;
   useScrollToTop(pathname);
   const isMobile = useIsMobile();
 
