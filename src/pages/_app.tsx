@@ -42,10 +42,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
         <title>Mildly Aggressive Folk | Twitch-streaming String Duo | Atlanta, GA</title>
       </Head>
-      <div
-        id="wrapper"
-        className={`fixed z-0 h-full w-full overflow-y-scroll bg-wrapper ${sourceSans3.className}`}
-      >
+      <div id="wrapper" className={`bg-wrapper ${sourceSans3.className}`}>
         {pathname === "/" ? <Hero /> : <HeaderBadge />}
         <div className="mx-auto flex h-fit w-full animate-in-from-bottom flex-col items-center xl:w-[calc(100%-4vw)] xl:max-w-[72rem]">
           <Nav />

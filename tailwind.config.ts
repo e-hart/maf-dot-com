@@ -50,11 +50,16 @@ const config: Config = {
             },
           },
           ".bg-wrapper": {
+            position: "fixed",
+            width: "100%",
+            height: "100%",
+            overflowY: "scroll",
             background:
               "linear-gradient(rgba(0,0,0,0.12),rgba(0,0,0,0.12)), url(/images/maf_couch.jpg), url(/images/bg.jpg)",
             backgroundPosition: "center, top, center",
             backgroundSize: "cover, contain, cover",
             backgroundRepeat: "no-repeat",
+            zIndex: "0",
             "@media (min-width: 1280px)": {
               backgroundSize: "cover, 90%, cover",
               backgroundPosition: "center",
