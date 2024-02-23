@@ -30,7 +30,11 @@ export default function Hero() {
         </h1>
 
         <br />
-        <p id="scrollToMaf" style={{ ...style }} className="my-4 px-4 text-xl font-thin italic">
+        <p
+          id="scrollToMaf"
+          style={{ ...style }}
+          className="my-4 scroll-my-12 px-4 text-xl font-thin italic"
+        >
           Atlanta based Twitch-streaming string duo
         </p>
         <br />
