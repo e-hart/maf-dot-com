@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "./Button";
 import HybridLink from "./HybridLink";
 
@@ -28,7 +29,7 @@ export default function FeaturedSection({
         className="relative z-20 mx-auto w-11/12 p-4 shadow-heavy transition-transform hover:scale-[1.01]"
       >
         <div className="vignette">
-          <img src={imgSrc} alt={imgAlt} />
+          <Image src={imgSrc} alt={imgAlt} width={1280} height={720} />
         </div>
       </HybridLink>
 

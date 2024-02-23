@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Button from "./Button";
 import { useRouter } from "next/router";
+import Image from "next/image";
 
 export default function PageTemplate({
   headline,
@@ -37,10 +38,10 @@ export default function PageTemplate({
         {buttonText}
       </Button>
 
-      <div className="relative z-20 mx-auto w-3/4 p-4 shadow-heavy transition-transform hover:scale-[1.01]">
+      <div className="relative z-20 mx-auto h-fit w-3/4 p-4 shadow-heavy transition-transform hover:scale-[1.01]">
         <a href={href} rel="noopener noreferrer" target="_blank">
           <div className={vignette ? "vignette" : ""}>
-            <img src={imgSrc} alt={imgAlt} />
+            <Image src={imgSrc} alt={imgAlt} width={1920} height="1080" />
           </div>
         </a>
       </div>
