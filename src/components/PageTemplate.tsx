@@ -46,7 +46,7 @@ export default function PageTemplate({
       <div className="relative z-20 mx-auto h-fit w-3/4 p-4 shadow-heavy transition-transform hover:scale-[1.01]">
         <a href={href} rel="noopener noreferrer" target="_blank">
           <div className={vignette ? "vignette" : ""}>
-            <Image src={imgSrc} alt={imgAlt} width={1920} height="1080" />
+            <Image src={imgSrc} alt={imgAlt} width="1600" height="900" />
           </div>
         </a>
       </div>

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Button from "./Button";
 import HybridLink from "./HybridLink";
 import Image from "next/image";
@@ -31,7 +30,7 @@ export default function SmallFeaturedSection({
           className="relative z-20 mx-auto w-3/4 p-4 shadow-heavy transition-transform hover:scale-[1.01]"
         >
           <div className="vignette">
-            <Image src={imgSrc} alt={imgAlt} width={1280} height={720} />
+            <Image src={imgSrc} alt={imgAlt} width={800} height={450} />
           </div>
         </HybridLink>
 

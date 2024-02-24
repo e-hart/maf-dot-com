@@ -19,7 +19,7 @@ export default function Shop() {
       imgSrc="/images/crossbody.jpg"
       imgAlt="Handmade merch"
       vignette
-      href="/shop"
+      href="https://www.etsy.com/shop/HoneybearHandmadeUS"
     />
   );
 }
