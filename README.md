@@ -5,6 +5,8 @@ Have a look through this project, and be sure to check out [cms_etl](../../../cm
 of a menu-driven command line environment written in Python that I created to expedite some ETL operations
 for a client. 
 
+Thank you for your consideration!
+
 ## Project Context
 
 This was a speed-run build (Squarespace was expiring in days and I did *not* want to pay another $250/yr)
