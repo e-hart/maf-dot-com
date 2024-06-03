@@ -43,6 +43,15 @@ const links = [
   },
 ];
 
+const ftdDescription = (
+  <>
+    The new Honey Bear Handmade crossbody bag, available in many styles (including Rifle Paper Co.)!
+    <br />
+    <br />
+    Check out the shop for the crossbody and other Stephanie-made merch.
+  </>
+);
+
 export default function Home() {
   return (
     <div id="featured" className="flex flex-col items-center">
@@ -52,14 +61,7 @@ export default function Home() {
         imgAlt="crossbody bags"
         headline="New Merch!"
         buttonText="Shop Now"
-        description={
-          <>
-            The new Honey Bear Handmade crossbody bag, available in many styles (including Rifle
-            Paper Co.)! <br />
-            <br />
-            Check out the shop for the crossbody and other Stephanie-made merch.
-          </>
-        }
+        description={ftdDescription}
       />
 
       <section id="links" className="flex w-full flex-wrap sm:flex-nowrap sm:divide-x">
