@@ -16,6 +16,6 @@ It was built in Next.js over the course of a day and a half.
 
 All components are from-scratch. 
 - Zero component libraries were used: there are no dependencies beyond Tailwind.
-- Hosted on AWS Lambda / S3 / Route 52 / etc via SST
+- Hosted on AWS Lambda / S3 / Route 53 / etc via SST
   - (opted for SSR instead of static deployment to support future features like Etsy integrations)
 - Reactive design scales to view widths as small as 250px
